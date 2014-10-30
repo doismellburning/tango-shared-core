@@ -9,3 +9,4 @@ smartypants>=1.6.0.3
 typogrify>=2.0.0
 tango-admin>=0.2
 tango-voting>=0.1
+six

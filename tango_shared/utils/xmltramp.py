@@ -5,6 +5,8 @@ __author__ = "Aaron Swartz"
 __credits__ = "Many thanks to pjz, bitsko, and DanC."
 __copyright__ = "(C) 2003-2006 Aaron Swartz. GNU GPL 2."
 
+import six
+
 
 def isstr(f):
     return isinstance(f, type('')) or isinstance(f, type(u''))
@@ -114,7 +116,7 @@ class Element:
     def __unicode__(self):
         text = ''
         for x in self._dir:
-            text += unicode(x)
+            text += six.u(x)
         return ' '.join(text.split())
         
     def __str__(self):

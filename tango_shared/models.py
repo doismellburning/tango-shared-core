@@ -1,4 +1,5 @@
 import datetime
+import six
 
 from PIL import Image
 
@@ -123,7 +124,7 @@ class BaseSidebarContentModel(models.Model):
         abstract = True
 
     def __unicode__(self):
-        return unicode(self.title)
+        return six.u(self.title)
 
     def save(self, *args, **kwargs):
         self.text_formatted = sanetize_text(self.text)

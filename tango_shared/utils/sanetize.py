@@ -1,4 +1,5 @@
 import re
+import six
 
 try:
     import urllib.parse as urlparse
@@ -210,7 +211,7 @@ def convert_links(text, trim_url_limit=None, nofollow=False, autoescape=False):
                         token = url.rsplit('/', 1)[1]
                         middle = '<iframe src="http://www.youtube.com/embed/%s" height="320" width="100%%"></iframe>' % token
                     except IndexError:
-                        middle = unicode(url)
+                        middle = six.u(url)
 
                 words[i] = mark_safe('%s%s%s' % (lead, middle, trail))
             else:
