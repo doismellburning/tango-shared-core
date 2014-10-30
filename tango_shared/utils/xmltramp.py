@@ -9,7 +9,7 @@ import six
 
 
 def isstr(f):
-    return isinstance(f, type('')) or isinstance(f, type(u''))
+    return isinstance(f, six.string_types) or isinstance(f, six.text_type)
 
 def islst(f):
     return isinstance(f, type(())) or isinstance(f, type([]))
