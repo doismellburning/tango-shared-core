@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.template import Template, Context
@@ -64,6 +66,6 @@ class TemplateTagsTests(TestCase):
         self.test_list.append('pears')
         c = Context({"mylist": self.test_list})
         output = t.render(c)
-        print output
+        print(output)
         self.assertEqual(output, 'apples, oranges, and pears')
 
