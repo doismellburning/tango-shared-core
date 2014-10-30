@@ -7,7 +7,7 @@ with open('docs/requirements.txt') as f:
 setup(
     name='tango-shared-core',
     version='0.12.2',
-    author=u'Tim Baxter',
+    author='Tim Baxter',
     author_email='mail.baxter@gmail.com',
     description='Tango shared/core functionality.',
     long_description=open('README.md').read(),
