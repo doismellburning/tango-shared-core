@@ -76,7 +76,7 @@ class Element:
             for k in a.keys():
                 out += ' ' + qname(k, inprefixes) + '="' + quote(a[k], False) + '"'
             return out
-        inprefixes = inprefixes or {u'http://www.w3.org/XML/1998/namespace': 'xml'}
+        inprefixes = inprefixes or {'http://www.w3.org/XML/1998/namespace': 'xml'}
 
         # need to call first to set inprefixes:
         attributes = arep(self._attrs, inprefixes, recursive)
