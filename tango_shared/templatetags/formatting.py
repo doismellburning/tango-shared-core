@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from django.template import Library
 from django.utils.safestring import mark_safe
 
@@ -83,7 +85,7 @@ def humanized_join(value, add_links=False):
         try:
             value = ['<a href="%s">%s</a>' % (item.get_absolute_url(), unicode(item)) for item in value]
         except AttributeError:
-            print "You did not pass objects with get_absolute_url() method."
+            print("You did not pass objects with get_absolute_url() method.")
             return
     else:
         # make everything a string to avoid errors
