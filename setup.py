@@ -16,7 +16,7 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     install_requires=required,
-    include_package_data=True
+    include_package_data=True,
     classifiers=(
         'Framework :: Django',
         'Intended Audience :: Developers',
