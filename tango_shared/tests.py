@@ -2,6 +2,7 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.template import Template, Context
 from django.test import TestCase
+from django.test.utils import override_settings
 import unittest
 
 
@@ -22,7 +23,7 @@ class TestSharedContent(TestCase):
         self.assertTrue(favicon_url in response.content)
         self.assertTrue(touch_icon in response.content)
 
-    @unittest.skip("Makes multiple generous assumptions about project behaviour")
+    @override_settings(CONTEXT_PROCESSORS=['tango_shared.context_processors.site_processor'])
     def test_shared_context_processor(self):
         """
         Test results of shared context processor are in template

@@ -12,3 +12,5 @@ DATABASES = {
 }
 
 SITE_ID = 1
+
+ROOT_URLCONF = 'test_urls'
