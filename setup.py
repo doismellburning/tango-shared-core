@@ -17,4 +17,10 @@ setup(
     zip_safe=False,
     install_requires=required,
     include_package_data=True
+    classifiers=(
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
+    ),
 )
